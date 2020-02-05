@@ -1,5 +1,5 @@
 function fetchBooks() {
-  fetch("https://anapioficeandfire.com/api/books", {
+  return fetch("https://anapioficeandfire.com/api/books", {
     method: 'GET',
     headers: {
       mode: 'cors'
@@ -8,7 +8,6 @@ function fetchBooks() {
   .then((response) => response.json())
   .then((data) => {
     renderBooks(data); 
-    return data; 
   })
   .catch((e) => {
     console.error('Error', e);
