@@ -3,7 +3,7 @@ function fetchBooks() {
   .then(function(response){
     response.json();
   }).then(response => {
-    renderBooks(response); 
+    window.renderBooks(response); 
     return response; 
   }); 
 } 
