@@ -1,10 +1,9 @@
 function fetchBooks() {
   fetch("https://anapioficeandfire.com/api/books", {
-    method: 'POST',
+    method: 'GET',
     headers: {
       mode: 'cors'
     },
-    body: JSON.stringify(data),
   })
   .then((response) => response.json())
   .then((data) => {
