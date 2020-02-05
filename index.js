@@ -3,7 +3,7 @@ function fetchBooks() {
     method: 'GET',
     headers: {
       mode: 'cors'
-    },
+    }
   })
   .then((response) => response.json())
   .then((data) => {
