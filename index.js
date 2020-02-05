@@ -1,12 +1,19 @@
 function fetchBooks() {
-  fetch("https://anapioficeandfire.com/api/books")
-  .then(function(response){
-    response.json();
-    console.log(response); 
-  }).then(response => {
-    console.log(response); 
-    renderBooks(response); 
-    return response; 
+  fetch("https://anapioficeandfire.com/api/books", {
+    method: 'POST',
+    headers: {
+      
+    },
+    body: JSON.stringify(data),
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data); 
+    renderBooks(data); 
+    return data; 
+  })
+  .catch((e) => {
+    console.error('Error', e);
   }); 
 } 
 
