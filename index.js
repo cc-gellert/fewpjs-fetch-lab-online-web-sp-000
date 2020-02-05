@@ -2,7 +2,7 @@ function fetchBooks() {
   fetch("https://anapioficeandfire.com/api/books", {
     method: 'POST',
     headers: {
-      
+      mode: 'cors'
     },
     body: JSON.stringify(data),
   })
